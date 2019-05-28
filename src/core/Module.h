@@ -19,6 +19,17 @@ public:
 
 typedef Module *(*PF_CreateModule)();
 
+#if defined(MONOLITHIC_BINARY)
+#define IMPLEMENT_MODULE(MODULE) \
+    extern "C"                   \
+    {                            \
+        Module *CreateModule()   \
+        {                        \
+            return new MODULE(); \
+        }                        \
+    }
+
+#else
 
 #define IMPLEMENT_MODULE(MODULE) \
     extern "C"                   \
@@ -28,4 +39,5 @@ typedef Module *(*PF_CreateModule)();
             return new MODULE(); \
         }                        \
     }
- 
+
+#endif

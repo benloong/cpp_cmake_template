@@ -64,3 +64,5 @@ see https://clang.llvm.org/docs/AttributeReference.html#calling-conventions
 #else
 #define EXPORT
 #endif
+
+#define MONOLITHIC_BINARY 1

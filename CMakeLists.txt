@@ -47,7 +47,7 @@ macro(ADD_TEST_PROJECT TEST_NAME TEST_FILES LIB_FILES)
         add_executable(${TEST_NAME} ${TEST_FILES})
     endif()
     target_link_libraries(${TEST_NAME} ${LIB_FILES})
-    set_target_properties(${TEST_NAME} PROPERTIES LINKER_LANGUAGE CXX DEBUG_POSTFIX "D")
+    set_target_properties(${TEST_NAME} PROPERTIES LINKER_LANGUAGE CXX DEBUG_POSTFIX "_Debug")
     ENABLE_CXX17(${TEST_NAME})
 endmacro()
 
