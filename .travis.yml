@@ -12,6 +12,6 @@ matrix:
         - mkdir build
         - cd build
         - cmake -G Xcode ..
-        - cmake --build .
-        - cd build/${CONFIGURATION}
+        - cmake --build . --config $CONFIGURATION
+        - cd build/$CONFIGURATION
         - ./Test
