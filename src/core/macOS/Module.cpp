@@ -11,7 +11,7 @@ struct ModuleMeta
 {
     Module *module;
     void *handle;
-    
+
     ModuleMeta(Module *module, void *handle) : module(module), handle(handle)
     {
     }
@@ -43,7 +43,11 @@ ModuleMap loadedModules;
 
 void _LoadModule(const char *name, void **handle, Module **module)
 {
-    auto realName = "lib" + std::string(name) + "D.dylib";
+#if DEBUG
+    auto realName = "lib" + std::string(name) + "_Debug.dylib";
+#else
+    auto realName = "lib" + std::string(name) + ".dylib";
+#endif
 
     /* Open macOS dynamic library */
     auto _handle = dlopen(realName.c_str(), RTLD_LAZY);
