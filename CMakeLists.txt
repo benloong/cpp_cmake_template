@@ -1,7 +1,7 @@
 
 # === CMake lists for the PlayKit - (05/07/2019) ===
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.2)
 project(PlayKit)
 
 

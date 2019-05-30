@@ -14,7 +14,6 @@ public:
     static bool IsModuleLoaded(const char *moduleName);
     static Module *GetModule(const char *moduleName);
     static Module *LoadModule(const char *moduleName);
-    static void UnloadModule(const char *moduleName);
 };
 
 typedef Module *(*PF_CreateModule)();
