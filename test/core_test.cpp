@@ -10,6 +10,7 @@ UTEST(ModuleTest, load)
 {
   auto render = Module::LoadModule("Render");
   ASSERT_TRUE(render != nullptr);
+  Module::UnloadModule("Render");
 }
 
 UTEST(VectorTest, reflect)

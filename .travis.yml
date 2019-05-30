@@ -14,10 +14,4 @@ env:
   - CONFIGURATION=Release
 
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
-  - cd build
-  - cd Debug
-  - ./Test
+  - sh run-test.sh

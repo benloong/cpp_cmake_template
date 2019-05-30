@@ -6,10 +6,10 @@ class Module
 {
 public:
     Module() = default;
+    virtual ~Module() = default;
 
     Module(const Module &) = delete;
     Module &operator=(const Module &) = delete;
-    virtual ~Module() = default;
 
     static bool IsModuleLoaded(const char *moduleName);
     static Module *GetModule(const char *moduleName);
