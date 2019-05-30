@@ -8,10 +8,10 @@ matrix:
       env:
         - CONFIGURATION=Debug
         - CONFIGURATION=Release
-      script:
-        - mkdir build
-        - cd build
-        - cmake -G Xcode ..
-        - cmake --build . --config $CONFIGURATION
-        - cd build/$CONFIGURATION
-        - ./Test
+script:
+  - mkdir build
+  - cd build
+  - cmake -G Xcode ..
+  - cmake --build . --config $CONFIGURATION
+  - cd build/$CONFIGURATION
+  - ./Test
