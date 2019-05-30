@@ -7,6 +7,9 @@ matrix:
       osx_image: xcode10.2 
       env:
         - CONFIGURATION=Debug
+    - os: osx
+      osx_image: xcode10.2 
+      env:
         - CONFIGURATION=Release
 script:
   - mkdir build
