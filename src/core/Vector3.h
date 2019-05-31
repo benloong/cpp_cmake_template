@@ -33,7 +33,7 @@ struct Vector3
 
     inline T angle(const Vector3 &b) const
     {
-        math::acos(this->dot(b) / (this->magnitude() * b.magnitude()));
+        return math::acos(this->dot(b) / (this->magnitude() * b.magnitude()));
     }
 
     inline T distance(const Vector3 &b) const
