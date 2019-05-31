@@ -7,7 +7,7 @@ project(PlayKit)
 
 # === Build path ===
 
-set(OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/build)
+set(OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_DIR} CACHE PATH "Build directory" FORCE)
 set(LIBRARY_OUTPUT_PATH ${OUTPUT_DIR} CACHE PATH "Build directory" FORCE)
 

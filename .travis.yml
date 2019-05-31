@@ -16,5 +16,5 @@ script:
   - cd build
   - cmake -G Xcode ..
   - cmake --build . --config $CONFIGURATION
-  - cd build/$CONFIGURATION
+  - cd bin/$CONFIGURATION
   - ./Test

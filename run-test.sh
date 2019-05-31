@@ -9,12 +9,12 @@ fi
 cd build 
 cmake -G Xcode ..
 cmake --build . --config Debug
-cd build/Debug
+cd bin/Debug
 ./Test
 
 cd ../../
 cmake --build . --config Release
-cd build/Release
+cd bin/Release
 ./Test
 
 cd ../../../
