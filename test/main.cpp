@@ -1,4 +1,4 @@
+#define CATCH_CONFIG_MAIN 
+#include "catch.h"
 
-#include "utest.h"
-
-UTEST_MAIN();
+// UTEST_MAIN();

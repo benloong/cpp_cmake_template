@@ -53,13 +53,13 @@ struct Vector3
 };
 
 template <typename T>
-inline Vector3<T> operator-(Vector3<T> &v) noexcept
+inline Vector3<T> operator-(const Vector3<T> &v) noexcept
 {
     return {-v.x, -v.y, -v.z};
 }
 
 template <typename T, typename U>
-inline Vector3<T> operator*(U s, Vector3<T> &v) noexcept
+inline Vector3<T> operator*(U s, const Vector3<T> &v) noexcept
 {
     return {T(v.x * s), T(v.y * s), T(v.z * s)};
 }
